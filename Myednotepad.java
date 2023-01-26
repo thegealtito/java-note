@@ -3,16 +3,17 @@ public class Myednotepad {
     public static void main(String[] args){
         JFrame f = new JFrame("Note.txt");
 
-        JMenu File, Edit, Format;
+        JMenu FileMenu, Edit, Format;
 
         JMenuBar mb = new JMenuBar();
-        File = new JMenu("File");
+        FileMenu = new JMenu("FileMenu");
         Edit = new JMenu("Edit");
         Format = new JMenu("Format");
 
-        JMenuItem i1, i2, i3, i4, i5;
+        JMenuItem i1, i2, i3, i4, i5, ia;
 
         i1 = new JMenuItem("Save");
+        ia = new JMenuItem("Save As");
         i2 = new JMenuItem("New Folder");
         i3 = new JMenuItem("Open");
         i4 = new JMenuItem("Print");
@@ -26,16 +27,13 @@ public class Myednotepad {
 
         JTextArea messageArea = new JTextArea();
         messageArea.setBounds(0, 0, 400, 400);
-        
-
-
-       File.add(i1); File.add(i2); File.add(i3); File.add(i4); File.add(i5);
+       FileMenu.add(i1); FileMenu.add(ia); FileMenu.add(i2); FileMenu.add(i3); FileMenu.add(i4); FileMenu.add(i5);
        Edit.add(i6); Edit.add(i7); 
        Format.add(i8); Format.add(i9);
        Edit.add(Format);
 
        f.add(messageArea);
-       mb.add(File);
+       mb.add(FileMenu);
        mb.add(Edit);
        f.setJMenuBar(mb);
        f.setSize(400, 400);
