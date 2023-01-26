@@ -6,7 +6,7 @@ public class Myednotepad {
         JMenu FileMenu, Edit, Format;
 
         JMenuBar mb = new JMenuBar();
-        FileMenu = new JMenu("FileMenu");
+        FileMenu = new JMenu("Menu");
         Edit = new JMenu("Edit");
         Format = new JMenu("Format");
 
