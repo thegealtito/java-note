@@ -38,7 +38,6 @@ public class Myednotepad {
        mb.add(FileMenu);
        mb.add(Edit);
        f.setJMenuBar(mb);
-
        f.setSize(400, 400);
        f.setLayout(null);
        f.setVisible(true);
