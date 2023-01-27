@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileWriter;
 
 public class Myednotepad {
     public static void main(String[] args) {
@@ -63,7 +65,6 @@ public class Myednotepad {
         f.setSize(400, 400);
         f.setLayout(null);
         f.setVisible(true);
-
     }
 
 }
