@@ -6,7 +6,7 @@ public class Myednotepad {
         JMenu FileMenu, Edit, Format;
 
         JMenuBar mb = new JMenuBar();
-        FileMenu = new JMenu("FileMenu");
+        FileMenu = new JMenu("Menu");
         Edit = new JMenu("Edit");
         Format = new JMenu("Format");
 
@@ -38,6 +38,7 @@ public class Myednotepad {
        mb.add(FileMenu);
        mb.add(Edit);
        f.setJMenuBar(mb);
+
        f.setSize(400, 400);
        f.setLayout(null);
        f.setVisible(true);
