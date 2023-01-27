@@ -17,7 +17,7 @@ public class Myednotepad {
         Edit = new JMenu("Edit");
         Format = new JMenu("Format");
 
-        JMenuItem save, i2, i3, i4, i5, ia, paste, copy, i8, i9, ib;
+        JMenuItem save, i2, i3, i4, i5, ia, paste, copy, i8, i9, cut;
 
         copy = new JMenuItem(new AbstractAction("Copy") {
             // when copy menu is click perform the action in the following method
@@ -27,10 +27,19 @@ public class Myednotepad {
             }
         });
         paste = new JMenuItem(new AbstractAction("Paste") {
-            // when copy menu is click perform the action in the following method
+            // when paste menu is click perform the action in the following method
             public void actionPerformed(ActionEvent e) {
                 // paste text in the message area
                 messageArea.paste();
+            }
+        });
+
+        cut = new JMenuItem(new AbstractAction("cut") {
+            // when cut menu is click perform the action in the following method
+            public void actionPerformed(ActionEvent e) {
+                // cut text in the message area
+                messageArea.cut();
+                System.out.println("go and work");
             }
         });
 
@@ -42,7 +51,7 @@ public class Myednotepad {
         i5 = new JMenuItem("Exit");
         i8 = new JMenuItem("delete");
         i9 = new JMenuItem("word wrap");
-        ib = new JMenuItem("cut");
+        cut = new JMenuItem("cut");
 
         messageArea.setBounds(0, 0, 400, 400);
         FileMenu.add(save);
@@ -55,7 +64,7 @@ public class Myednotepad {
         Edit.add(paste);
         Format.add(i8);
         Format.add(i9);
-        Format.add(ib);
+        Format.add(cut);
         Edit.add(Format);
 
         f.add(messageArea);
