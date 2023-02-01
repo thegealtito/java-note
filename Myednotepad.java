@@ -39,11 +39,16 @@ public class Myednotepad {
             public void actionPerformed(ActionEvent e) {
                 // cut text in the message area
                 messageArea.cut();
-                System.out.println("go and work");
             }
         });
 
-        save = new JMenuItem("Save");
+        save = new JMenuItem(new AbstractAction("cut") {
+            // when cut menu is click perform the action in the following method
+            public void actionPerformed(ActionEvent e) {
+                // i gave up, lemme write my own from start
+            }
+        });
+
         ia = new JMenuItem("Save As");
         i2 = new JMenuItem("New Folder");
         i3 = new JMenuItem("Open");
